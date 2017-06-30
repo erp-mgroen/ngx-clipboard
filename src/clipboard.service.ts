@@ -5,7 +5,7 @@ import { WINDOW } from "ngx-window-token";
 
 @Injectable()
 export class ClipboardService {
-    private tempTextArea: HTMLTextAreaElement;
+    private tempTextArea: any;
     constructor(
         @Inject(DOCUMENT) private document: any,
         @Inject(WINDOW) private window: any,
