@@ -26,7 +26,7 @@ export class ClipboardDirective implements OnInit, OnDestroy {
 
     @HostListener('click', ['$event.target']) private onClick(button: ElementRef) {
         if (!this.clipboardSrv.isSupported) {
-            this.handleResult(false, undefined);
+            this.handleResult(false, '');
         } else if (this.targetElm && this.clipboardSrv.isTargetValid(this.targetElm)) {
             this.handleResult(this.clipboardSrv.copyFromInputElement(this.targetElm, this.renderer),
                 this.targetElm.value);
